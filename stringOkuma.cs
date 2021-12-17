@@ -4,8 +4,8 @@ namespace Alistirma
 {
     class Program
     {
-        static string kelime;
-        static int i, j, nokta = 0;
+        static string kelime, tekrar;
+        static int i, nokta = 0;
 
         static void Main(string[] args)
         {
@@ -44,7 +44,7 @@ namespace Alistirma
                 }
                 else
                 {
-                    Console.WriteLine("Girilen kelime ondalıklı bir sayı değildir!");
+                    Console.WriteLine("Girilen kelime ondalıklı bir sayı veya tam sayı değildir!");
                 }
             }
             else if (str[0] == '-' || str[0] == '+' || str[0] == '1' || str[0] == '2' || str[0] == '3' || str[0] == '4' || str[0] == '5' || str[0] == '6' || str[0] == '7' || str[0] == '8' || str[0] == '9')
@@ -74,12 +74,20 @@ namespace Alistirma
                 }
                 else
                 {
-                    Console.WriteLine("Girilen kelime ondalıklı bir sayı değildir!");
+                    Console.WriteLine("Girilen kelime ondalıklı bir sayı veya tam sayı değildir!");
                 }
             }
             else
             {
-                Console.WriteLine("Girilen kelime ondalıklı bir sayı değildir!");
+                Console.WriteLine("Girilen kelime ondalıklı bir sayı veya tamsayı değildir!");
+            }
+            Console.WriteLine();
+            Console.Write("Tekrar denemek ister misiniz? E / H ");
+            tekrar = Console.ReadLine();
+            if (tekrar == "e" || tekrar == "E")
+            {
+                nokta = 0;
+                Main(null);
             }
         }
     }
