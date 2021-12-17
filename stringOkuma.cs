@@ -30,9 +30,13 @@ namespace Alistirma
                         break;
                     }
                 }
-                if (i == str.Length)
+                if (i == str.Length && str.Contains('.') == false)
                 {
-                    Console.WriteLine("Tam sayı bir kelime girilmiştir.");
+                    Console.WriteLine("Kelime TAM SAYI bir kelimedir.");
+                }
+                else if (i == str.Length && str.Contains('.') == true)
+                {
+                    Console.WriteLine("Kelime ONDALIKLI SAYI bir kelimedir.");
                 }
                 else
                 {
@@ -52,9 +56,13 @@ namespace Alistirma
                         break;
                     }
                 }
-                if (i == str.Length)
+                if (i == str.Length && str.Contains('.') == false)
                 {
-                    Console.WriteLine("Tam sayı bir kelime girilmiştir.");
+                    Console.WriteLine("Kelime TAM SAYI bir kelimedir.");
+                }
+                else if (i == str.Length && str.Contains('.') == true)
+                {
+                    Console.WriteLine("Kelime ONDALIKLI SAYI bir kelimedir.");
                 }
                 else
                 {
