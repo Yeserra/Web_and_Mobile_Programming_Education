@@ -5,7 +5,7 @@ namespace Alistirma
     class Program
     {
         static string kelime;
-        static int i, j;
+        static int i, j, nokta = 0;
 
         static void Main(string[] args)
         {
@@ -23,6 +23,10 @@ namespace Alistirma
                 {
                     if (str[i] == '0' || str[i] == '1' || str[i] == '2' || str[i] == '3' || str[i] == '4' || str[i] == '5' || str[i] == '6' || str[i] == '7' || str[i] == '8' || str[i] == '9' || str[i] == '.')
                     {
+                        if (str[i] == '.')
+                        {
+                            nokta++;
+                        }
                         continue;
                     }
                     else
@@ -34,7 +38,7 @@ namespace Alistirma
                 {
                     Console.WriteLine("Kelime TAM SAYI bir kelimedir.");
                 }
-                else if (i == str.Length && str.Contains('.') == true)
+                else if (i == str.Length && str.Contains('.') == true && nokta == 1)
                 {
                     Console.WriteLine("Kelime ONDALIKLI SAYI bir kelimedir.");
                 }
@@ -49,6 +53,10 @@ namespace Alistirma
                 {
                     if (str[i] == '0' || str[i] == '1' || str[i] == '2' || str[i] == '3' || str[i] == '4' || str[i] == '5' || str[i] == '6' || str[i] == '7' || str[i] == '8' || str[i] == '9' || str[i] == '.')
                     {
+                        if (str[i] == '.')
+                        {
+                            nokta++;
+                        }
                         continue;
                     }
                     else
@@ -60,7 +68,7 @@ namespace Alistirma
                 {
                     Console.WriteLine("Kelime TAM SAYI bir kelimedir.");
                 }
-                else if (i == str.Length && str.Contains('.') == true)
+                else if (i == str.Length && str.Contains('.') == true && nokta == 1)
                 {
                     Console.WriteLine("Kelime ONDALIKLI SAYI bir kelimedir.");
                 }
