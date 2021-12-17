@@ -6,4 +6,5 @@ Günlerin İçerikleri:
 2.Gün = Döngüler, Try-Catch, Switch-Case.
 3.Gün = Fonksiyonlar, Return, Metotlar
 4.Gün = Generic değişkenler, sql'e giriş.
-5.Gün = 
+5.Gün = Tekrar
+6.Gün = 
