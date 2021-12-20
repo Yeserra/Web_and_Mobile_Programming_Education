@@ -7,4 +7,5 @@ Günlerin İçerikleri:
 3.Gün = Fonksiyonlar, Return, Metotlar
 4.Gün = Generic değişkenler, sql'e giriş.
 5.Gün = Tekrar
-6.Gün = 
+6.Gün = Sql Sorguları (select)
+7.Gün = 
