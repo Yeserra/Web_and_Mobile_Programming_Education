@@ -36,3 +36,17 @@ inner join Unvan un on pc.UnvanId = un.UnvanId
 inner join Ulke ul on pc.UlkeId = ul.UlkeId
 inner join Ulke uy on pc.UyrukId = uy.UlkeId
 left join Personel py on pc.YoneticiId = py.PersonelId
+
+
+SELECT * FROM Personel
+SELECT p1.PersonelId, p1.Ad + ' ' + p1.Soyad Çalışan, UnvanAd, u1.UlkeAd İkamet, u2.UlkeAd Uyruk, p2.Ad + ' ' + p2.Soyad Yönetici FROM Personel p1
+inner join Unvan u on(p1.UnvanId = u.UnvanId)
+inner join Ulke u1 on(u1.UlkeId = p1.UlkeId)
+inner join Ulke u2 on(u2.UlkeId = p1.UyrukId)
+inner join Personel p2 on(p2.PersonelId = p1.YoneticiId)
+
+SELECT p1.PersonelId, p1.Ad + ' ' + p1.Soyad Çalışan, UnvanAd, u1.UlkeAd İkamet, u2.UlkeAd Uyruk, isnull ( p2.Ad + ' ' + p2.Soyad, 'Başkan') Yönetici FROM Personel p1
+inner join Unvan u on(p1.UnvanId = u.UnvanId)
+inner join Ulke u1 on(u1.UlkeId = p1.UlkeId)
+inner join Ulke u2 on(u2.UlkeId = p1.UyrukId)
+left join Personel p2 on(p2.PersonelId = p1.YoneticiId)
