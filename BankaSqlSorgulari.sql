@@ -56,28 +56,19 @@ set @Bakiye=(select Bakiye from Musteri where MusteriId=@MusteriId)
 	SET NOCOUNT ON;
 
 IF @Tutar>@Bakiye
-	
 BEGIN
-Print 'Bakiye yetersiz'
-
+	print 'Bakiye yetersiz'
 
 END
-else
-begin 
--- SET NOCOUNT ON added to prevent extra result sets from
-	-- interfering with SELECT statements.
 
-    -- Insert statements for procedure here
-
-	
-	
+ELSE
+BEGIN
 	Update Musteri set Bakiye = Bakiye-@Tutar
 	where @MusteriId=MusteriId
 
 	insert into Hareket(Tarih,Tutar,MusteriId)
 	Values (GETDATE(),@Tutar*-1,@MusteriId)
-
-	end
+END
 
 --SQL'de değişken tanımlamaları DECLARE deyimiyle yapılır.
 
