@@ -79,6 +79,8 @@ begin
 
 	end
 
+--SQL'de değişken tanımlamaları DECLARE deyimiyle yapılır.
+
 
 --===========================================================PARA_YATIRMA===========================================================================
 
@@ -103,8 +105,8 @@ ALTER PROCEDURE [dbo].[ParaYatirma]
 	@Tutar decimal(18,2)
 AS
 BEGIN
-	-- SET NOCOUNT ON added to prevent extra result sets from
-	-- interfering with SELECT statements.
+	-- SET NOCOUNT ON added to prevent extra result sets from (SET COUNT ON, fazladan sonuç kümelerinin SELECT
+	-- interfering with SELECT statements.                     ifadelerine müdahale etmesini önlemek için eklendi)
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
@@ -116,6 +118,8 @@ BEGIN
 
 END
 
+--İşlemler oluşturulduktan sonra ve create yerine alter yazıldıktan sonra çalıştırmak için:
+--işlem üzerine -> SağTık -> Execute Stored Procedure... -> values kısmına değerler yazılır.
 
 
 
