@@ -114,4 +114,133 @@ END
 
 
 
+--============================================================================PARA_CEKMET========================================================================
+
+
+
+USE [BankaDB]
+GO
+/****** Object:  StoredProcedure [dbo].[ParaCekmeT]    Script Date: 24.12.2021 20:07:35 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER PROCEDURE [dbo].[ParaCekmeT]
+	-- Add the parameters for the stored procedure here
+	@MusteriId int,
+	@Tutar decimal(18,2)
+AS
+BEGIN
+	declare @Bakiye decimal(18, 2)
+	select @Bakiye = Bakiye from Musteri where MusteriId = @MusteriId
+SET NOCOUNT ON;
+
+BEGIN TRANSACTION
+	BEGIN TRY
+
+	if @Tutar <= @Bakiye
+	BEGIN
+	update Musteri set Bakiye = Bakiye - @Tutar where MusteriId = @MusteriId
+	insert into Hareket (Tarih, Tutar, MusteriId) values ('akşdg', @Tutar * -1, @MusteriId) --Tarih değeri hatalı girildi ki suni bir aksaklık oluşturuldu.
+	END
+
+	else
+	BEGIN
+	print('Yetersiz Bakiye')
+	END
+
+COMMIT TRAN
+
+	END TRY
+
+	BEGIN CATCH
+
+	rollback tran
+	print('Bir Hata Oluştu!')
+	print('İşlem geri alındı!')
+
+	END CATCH
+
+END
+
+
+
+--======================================================================PARA_YATIRMAT==============================================================================
+
+
+
+USE [BankaDB]
+GO
+/****** Object:  StoredProcedure [dbo].[ParaYatirmaT]    Script Date: 24.12.2021 20:09:03 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER PROCEDURE [dbo].[ParaYatirmaT]
+	-- Add the parameters for the stored procedure here
+	@MusteriId int,
+	@Tutar decimal(18,2)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	BEGIN TRANSACTION
+	BEGIN TRY
+
+    -- Insert statements for procedure here
+	update Musteri set Bakiye = Bakiye + @Tutar where MusteriId = @MusteriId
+
+	insert into Hareket (Tarih, Tutar, MusteriId) values('dafjiıs', @Tutar, @MusteriId)
+
+	COMMIT TRAN
+
+	END TRY
+
+	BEGIN CATCH
+
+	rollback tran
+	print('Bir Hata Oluştu!')
+	print('İşlem geri alındı!')
+
+	END CATCH
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
