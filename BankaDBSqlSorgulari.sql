@@ -109,8 +109,8 @@ BEGIN
 
 END
 
---İşlemler oluşturulduktan sonra ve create yerine alter yazıldıktan sonra çalıştırmak için:
---işlem üzerine -> SağTık -> Execute Stored Procedure... -> values kısmına değerler yazılır.
+--İşlemler oluşturulduktan sonra çalıştırmak istediğin işlem üzerine:
+---> SağTık -> Execute Stored Procedure... -> values kısmına değerler yazılır.
 
 
 
