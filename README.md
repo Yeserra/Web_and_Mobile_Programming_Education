@@ -13,7 +13,7 @@ Günlerin İçerikleri:
 9.Gün   =  Sql - Trigger
 10.Gün  = Sql - Delete, Insert, Update
 11.Gün  = Index, OOP - Giriş
-12.Gün  = OOP (Ogrenci Projesi)
-13.Gün  = OOP, Kalıtım - Giriş
-14.Gün  = Kalıtım, Contructors (Yapıcılar), Extensions
+12.Gün  = OOP(Ogrenci Projesi)
+13.Gün  = OOP(Kapsülleme(get, set), Polymorphism(virtual-override), Abstract kavramı), Kalıtım-Giriş
+14.Gün  = Kalıtım(Interfaces, Class), Contructors (Yapıcılar), Extension(Genişletme Metotları)
 15.Gün  = DLL Oluşturma ve kullanma
