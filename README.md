@@ -15,3 +15,5 @@ Günlerin İçerikleri:
 11.Gün  = Index, OOP - Giriş
 12.Gün  = OOP (Ogrenci Projesi)
 13.Gün  = OOP, Kalıtım - Giriş
+14.Gün  = Kalıtım, Contructors (Yapıcılar), Extensions
+15.Gün  = DLL Oluşturma ve kullanma
