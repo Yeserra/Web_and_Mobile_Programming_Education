@@ -30,7 +30,7 @@ Günlerin İçerikleri:
 26.Gün  = MVC: MvcWithLayout
 27.Gün  = MVC: MvcWithData -> Proje (ASP .NET Web Application (.NET Framework))
 28.Gün  = Proje: Devam (SQL Bağlantısı, Controller ekleme, View Oluşturma..)
-29.Gün  = Proje: Devam (Crud, Model ~tablo sütun isimlerini farklı sütun isimleri ile oluşturabilme, içinde foreignkey barındıran tabloda nelere dikkat edilmeli?~)
+29.Gün  = Proje: Devam (Crud, Model(tablo sütun isimlerini farklı sütun isimleri ile oluşturabilme, içinde foreignkey barındıran tabloda nelere dikkat edilmeli?))
 30.Gün  = Proje: Devam (Kayıt Ekleme, Silme, Güncelleme, Listeleme, İptal Etme)
 
 
