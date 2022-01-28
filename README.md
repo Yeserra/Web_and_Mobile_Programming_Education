@@ -32,6 +32,11 @@ Günlerin İçerikleri:
 28.Gün  = Proje: Devam (SQL Bağlantısı, Controller ekleme, View Oluşturma..)
 29.Gün  = Proje: Devam (Crud, Model(tablo sütun isimlerini farklı sütun isimleri ile oluşturabilme, içinde foreignkey barındıran tabloda nelere dikkat edilmeli?))
 30.Gün  = Proje: Devam (Kayıt Ekleme, Silme, Güncelleme, Listeleme, İptal Etme)
+31.Gün  = KAR TATİLİ
+32.Gün  = KAR TATİLİ
+33.Gün  = KAR TATİLİ
+34.Gün  = KAR TATİLİ
+35.Gün  = KAR TATİLİ
 
 
 
