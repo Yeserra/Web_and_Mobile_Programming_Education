@@ -27,6 +27,10 @@ if(keys && keyPad && display)
                 let str = display.innerText;
                 display.innerText = str.substring(0, (str.length-1));
             }
+            else if (this.classList.contains('enter_tusu'))
+            {
+                display.innerText = this.dataset.key;
+            }
             else
             {
                 if(capsLockMode)//Ekrana yazı yazmayı sağlayan kod:
