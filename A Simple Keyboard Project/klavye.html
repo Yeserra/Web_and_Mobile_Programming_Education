@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="klavye.css">
+
+</head>
+<body>
+    <pre class="ekran"></pre>
+    <div class="container" id="partBir">
+        <div class="satir birinci">
+            <span class="num" data-key="1">1</span>
+            <span class="num" data-key="2">2</span>
+            <span class="num" data-key="3">3</span>
+            <span class="num" data-key="4">4</span>
+            <span class="num" data-key="5">5</span>
+            <span class="num" data-key="6">6</span>
+            <span class="num" data-key="7">7</span>
+            <span class="num" data-key="8">8</span>
+            <span class="num" data-key="9">9</span>
+            <span class="num" data-key="0">0</span>
+        </div>
+        <div class="satir"> <!-- "satir" ismi ilk klavyeye ait satırları temsil etmesi için başına "bir" yazıldı -->
+            <span class="tus" data-key="q">q</span>
+            <span class="tus" data-key="w">w</span>
+            <span class="tus" data-key="e">e</span>
+            <span class="tus" data-key="r">r</span>
+            <span class="tus" data-key="t">t</span>
+            <span class="tus" data-key="y">y</span>
+            <span class="tus" data-key="u">u</span>
+            <span class="tus" data-key="ı">ı</span>
+            <span class="tus" data-key="o">o</span>
+            <span class="tus" data-key="p">p</span>
+            <span class="tus" data-key="ğ">ğ</span>
+            <span class="tus" data-key="ü">ü</span>
+        </div>
+        <div class="satir">
+            <span class="tus" data-key="a">a</span>
+            <span class="tus" data-key="s">s</span>
+            <span class="tus" data-key="d">d</span>
+            <span class="tus" data-key="f">f</span>
+            <span class="tus" data-key="g">g</span>
+            <span class="tus" data-key="h">h</span>
+            <span class="tus" data-key="j">j</span>
+            <span class="tus" data-key="k">k</span>
+            <span class="tus" data-key="l">l</span>
+            <span class="tus" data-key="ş">ş</span>
+            <span class="tus" data-key="i">i</span>
+        </div>
+        <div class="satir">
+            <span class="caps_tusu">CaspLock</span>
+            <span class="tus" data-key="z">z</span>
+            <span class="tus" data-key="x">x</span>
+            <span class="tus" data-key="c">c</span>
+            <span class="tus" data-key="v">v</span>
+            <span class="tus" data-key="b">b</span>
+            <span class="tus" data-key="n">n</span>
+            <span class="tus" data-key="m">m</span>
+            <span class="tus" data-key="ö">ö</span>
+            <span class="tus" data-key="ç">ç</span>
+            <span class="sil_tusu">Sil</span>
+        </div>
+        <div class="satir">
+            <span class="ozel_tusu" onclick="diger('partIki')">123</span>
+            <span class="virgul_tusu" data-key=",">,</span>
+            <span id="bosluk_tusu" data-key=" "></span>
+            <span class="nokta_tusu" data-key=".">.</span>
+            <span class="enter_tusu">Enter</span>
+        </div>
+    </div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="container" id="partIki" style="display:none">
+        <div class="birinci">
+            <!-- Bu satır boş -->
+        </div>
+        <div class="satir" style="justify-content: space-between">
+            <span class="tus" style="width: 115px" data-key="#">#</span>
+            <span class="tus" data-key="₺">₺</span>
+            <span class="tus" data-key="&">&</span>
+            <span class="tus" data-key="_">_</span>
+            <span class="tus" data-key="-">-</span>
+            <span class="tus sayi" data-key="1">1</span>
+            <span class="tus sayi" data-key="2">2</span>
+            <span class="tus sayi" data-key="3">3</span>
+            <span class="tus" style="width: 115px" data-key="?">?</span>
+        </div>
+        <div class="satir" style="justify-content: space-between">
+            <span class="tus" style="width: 115px" data-key="@">@</span>
+            <span class="tus" data-key="(">(</span>
+            <span class="tus" data-key=")">)</span>
+            <span class="tus" data-key="=">=</span>
+            <span class="tus" data-key="+">+</span>
+            <span class="tus sayi" data-key="4">4</span>
+            <span class="tus sayi" data-key="5">5</span>
+            <span class="tus sayi" data-key="6">6</span>
+            <span class="tus" style="width: 115px" data-key="!">!</span>
+        </div>
+        <div class="satir" style="justify-content: space-between">
+            <span class="ozel_tusu" style="width: 115px" onclick="diger('partUc')">{&=</span>
+            <span class="tus" data-key="'">'</span>
+            <span class="tus" data-key=":">:</span>
+            <span class="tus" data-key="%">%</span>
+            <span class="tus" data-key="/">/</span>
+            <span class="tus sayi" data-key="7">7</span>
+            <span class="tus sayi" data-key="8">8</span>
+            <span class="tus sayi" data-key="9">9</span>
+            <span class="sil_tusu" style="width: 115px" >Sil</span>
+        </div>
+        <div class="satir">
+            <span class="ozel_tusu" style="width: 115px" onclick="diger('partBir')">abc</span>
+            <span class="tus" data-key="&quot">"</span>
+            <span id="bosluk_tusu" style="width: 145px" data-key=" "></span>
+            <span class="tus" data-key="*">*</span>
+            <span class="tus sayi" data-key=",">,</span>
+            <span class="tus sayi" data-key="0">0</span>
+            <span class="tus sayi" data-key=".">.</span>
+            <span class="enter_tusu" style="width: 115px">Enter</span>
+        </div>
+    </div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="container" id="partUc" style="display:none">
+        <div class="birinci">
+            <!-- Bu satır boş -->
+        </div>
+        <div class="satir" style="justify-content: space-between">
+            <span class="tus" style="width: 95.4px" data-key="$">$</span>
+            <span class="tus" style="width: 95.4px" data-key="€">€</span>
+            <span class="tus" style="width: 95.4px" data-key="¥">¥</span>
+            <span class="tus" style="width: 95.4px" data-key="¢">¢</span>
+            <span class="tus" style="width: 95.4px" data-key="©">©</span>
+            <span class="tus" style="width: 95.4px" data-key="®">®</span>
+            <span class="tus" style="width: 95.4px" data-key="™">™</span>
+            <span class="tus" style="width: 95.4px" data-key="~">~</span>
+            <span class="tus" style="width: 95.4px" data-key="¿">¿</span>
+        </div>
+        <div class="satir" style="justify-content: space-between">
+            <span class="ozel_tusu" style="width: 95.4px" data-key="     ">Tab</span>
+            <span class="tus" style="width: 95.4px" data-key="[">[</span>
+            <span class="tus" style="width: 95.4px" data-key="]">]</span>
+            <span class="tus" style="width: 95.4px" data-key="{">{</span>
+            <span class="tus" style="width: 95.4px" data-key="}">}</span>
+            <span class="tus" style="width: 95.4px" data-key="&lt">&lt</span>
+            <span class="tus" style="width: 95.4px" data-key="&gt">&gt</span>
+            <span class="tus" style="width: 95.4px" data-key="^">^</span>
+            <span class="tus" style="width: 95.4px" data-key="¡">¡</span>
+        </div>
+        <div class="satir" style="justify-content: space-between">
+            <span class="ozel_tusu" style="width: 95.4px" onclick="diger('partIki')">123</span>
+            <span class="tus" style="width: 95.4px" data-key="∞">∞</span>
+            <span class="tus" style="width: 95.4px" data-key=";">;</span>
+            <span class="tus" style="width: 95.4px" data-key="÷">÷</span>
+            <span class="tus" style="width: 95.4px" data-key="\">\</span>
+            <span class="tus" style="width: 95.4px" data-key="|">|</span>
+            <span class="tus" style="width: 95.4px" data-key="¦">¦</span>
+            <span class="tus" style="width: 95.4px" data-key="¬">¬</span>
+            <span class="sil_tusu" style="width: 95.4px" >Sil</span>
+        </div>
+        <div class="satir">
+            <span class="ozel_tusu" style="width: 95.4px" onclick="diger('partBir')">abc</span>
+            <span id="bosluk_tusu" style="width: 298px" data-key=" "></span>
+            <span class="tus" style="width: 95.4px" data-key="×">×</span>
+            <span class="tus" style="width: 95.4px" data-key="§">§</span>
+            <span class="tus" style="width: 95.4px" data-key="¶">¶</span>
+            <span class="tus" style="width: 95.4px" data-key="○">○</span>
+            <span class="enter_tusu" style="width: 95.4px">Enter</span>
+        </div>
+    </div>
+
+    <script src="klavye.js"></script>
+
+</body>
+</html>
