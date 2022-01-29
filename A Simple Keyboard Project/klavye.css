@@ -22,6 +22,14 @@ body{
     box-shadow: 10px 0px 10px -5px gray;
     border: solid black 1px;
 }
+pre{
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
 
 .satir{
     width: 100%;
