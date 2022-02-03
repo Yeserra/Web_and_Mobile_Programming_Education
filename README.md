@@ -37,7 +37,9 @@ Günlerin İçerikleri:
 33.Gün  = KAR TATİLİ
 34.Gün  = KAR TATİLİ
 35.Gün  = KAR TATİLİ
-
+36.Gün  = FrameworkProje
+37.Gün  = EntityFramework
+38.Gün  = EntityFramework
 
 
 
