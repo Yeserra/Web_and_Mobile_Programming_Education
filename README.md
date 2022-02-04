@@ -28,7 +28,7 @@ Günlerin İçerikleri:
 24.Gün  = DOM Dinamik Element Ekleme, Silme, Değiştirme, Gezinme
 25.Gün  = Async - Sync, EventListener
 26.Gün  = MVC: MvcWithLayout
-27.Gün  = MVC: MvcWithData -> Proje (ASP .NET Web Application (.NET Framework))
+27.Gün  = MVC: MvcWithData -> Proje (ASP .NET Web Application (.NET Framework)) (SQL Bağlantısı: Dapper)
 28.Gün  = Proje: Devam (SQL Bağlantısı, Controller ekleme, View Oluşturma..)
 29.Gün  = Proje: Devam (Crud, Model(tablo sütun isimlerini farklı sütun isimleri ile oluşturabilme, içinde foreignkey barındıran tabloda nelere dikkat edilmeli?))
 30.Gün  = Proje: Devam (Kayıt Ekleme, Silme, Güncelleme, Listeleme, İptal Etme)
@@ -37,10 +37,11 @@ Günlerin İçerikleri:
 33.Gün  = KAR TATİLİ
 34.Gün  = KAR TATİLİ
 35.Gün  = KAR TATİLİ
-36.Gün  = FrameworkProje
-37.Gün  = EntityFramework
-38.Gün  = EntityFramework
-
+36.Gün  = FrameworkProje (ASP .NET Web Application (.NET Framework) + Class Library) (SQL Bağlantısı: Dapper)
+37.Gün  = FrameworkProje Devam
+38.Gün  = EntityFramework (ASP .NET Web Application (.NET Framework))(Empty + Add->MVC) (SQL Bağlantısı: MVC 5 Layout Page (Razor) ile)
+39.Gün  = EntityFramework Devam
+40.Gün  = TATİL
 
 
 
