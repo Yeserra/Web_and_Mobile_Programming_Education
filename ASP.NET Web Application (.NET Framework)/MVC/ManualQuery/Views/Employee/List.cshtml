@@ -1,0 +1,37 @@
+@model List<ManualQuery.DTOs.EmployeeDTO>
+
+<div class="row">
+    <div class="col-md-7">
+        <h2>Employee List</h2>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name Surname</th>
+                    <th>Residence</th>
+                    <th>Nationality</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.EmployeeId</td>
+                        <td>@item.Name_Surname</td>
+                        <td>@item.Residence</td>
+                        <td>@item.Nationality</td>
+                        <td><a class="btn btn-danger" href="/Employee/Delete/@item.EmployeeId">Delete</a></td>
+                        <td><a class="btn btn-success" href="/Employee/Update/@item.EmployeeId">Update</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <form action="/Employee/Create" method="get">
+            <a class="btn btn-primary" href="/Employee/Create" type="submit" value="New">Save New Employee</a>
+        </form>
+    </div>
+</div>
+
