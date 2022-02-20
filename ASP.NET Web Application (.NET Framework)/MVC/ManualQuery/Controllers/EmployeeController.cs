@@ -29,7 +29,7 @@ namespace ManualQuery.Controllers
         {
             EmployeeModel e = new EmployeeModel();
             e.Title = "Add New Employee";
-            e.BtnVal = "Save";
+            e.BtnVal = "Add";
             e.BtnClass = "btn btn-primary";
             e.Employee = new Employee();
             e.DegreeList = GetDegreeList();
