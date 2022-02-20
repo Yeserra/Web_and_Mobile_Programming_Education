@@ -1,0 +1,32 @@
+@model List<ManualQuery.Models.Classes.Country>
+
+<div class="row">
+    <div class="col-md-7">
+        <h2>Country List</h2>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CountryId</td>
+                        <td>@item.CountryName</td>
+                        <td><a class="btn btn-danger" href="/Country/Delete/@item.CountryId">Delete</a></td>
+                        <td><a class="btn btn-success" href="/Country/Update/@item.CountryId">Update</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <form action="/Country/Create" method="get">
+            <a class="btn btn-primary" href="/Country/Create" type="submit" value="New">New Country</a>
+        </form>
+    </div>
+</div>
