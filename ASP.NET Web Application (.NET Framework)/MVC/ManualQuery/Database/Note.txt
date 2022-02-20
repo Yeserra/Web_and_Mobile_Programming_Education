@@ -1,0 +1,17 @@
+database üzerine sağ tık
+restore database..
+Device
+...
+Add
+Temp.bak
+ok
+ok
+ok
+
+
+Database'i almak için:
+database adının üzerine sağ tık
+tasks
+back up
+add kısmından yeni bir yere kaydedebilirsin
+isim girerken sonuna mutlaka .bak yazılmalıdır!
