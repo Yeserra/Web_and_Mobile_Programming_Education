@@ -1,0 +1,22 @@
+@model ManualQuery.Models.ViewModels.DegreeModel
+
+<h2>@Model.Title</h2>
+
+<div class="row">
+    <div class="col-md-7">
+        <form method="post">
+
+            <input class="form-control" type="hidden" value="@Model.Degree.DegreeId" name="DegreeId" readonly/>
+
+            <label>Name</label>
+            <input class="form-control" type="text" value="@Model.Degree.DegreeName" name="DegreeName"/>
+
+            <br/>
+
+            <input class="@Model.BtnClass" type="submit" value="@Model.BtnVal"/>
+
+            <input class="btn btn-warning" type="submit" value="Cancel" formaction="/Degree/List"/>
+
+        </form>
+    </div>
+</div>
