@@ -1,0 +1,32 @@
+@model List<ManualQuery.Models.Classes.Degree>
+
+<div class="row">
+    <div class="col-md-7">
+        <h2>Degree List</h2>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.DegreeId</td>
+                        <td>@item.DegreeName</td>
+                        <td><a class="btn btn-danger" href="/Degree/Delete/@item.DegreeId">Delete</a></td>
+                        <td><a class="btn btn-success" href="/Degree/Update/@item.DegreeId">Update</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <form action="/Degree/Create" method="get">
+            <a class="btn btn-primary" href="/Degree/Create" type="submit" value="New">Save</a>
+        </form>
+    </div>
+</div>
