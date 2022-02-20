@@ -1,0 +1,23 @@
+@model ManualQuery.Models.Classes.Country
+
+<h2>Add New Country</h2>
+
+<div class="row">
+    <div class="col-md-7">
+        <form method="post">
+
+            <label>Id</label>
+            <input class="form-control" type="text" name="CountryId" value="@Model.CountryId"/>
+
+            <label>Name</label>
+            <input class="form-control" type="text" name="CountryName" value="@Model.CountryName"/>
+
+            <br/>
+
+            <input class="btn btn-primary" type="submit" value="Save"/>
+
+            <input class="btn btn-warning" type="submit" value="Cancel" formaction="/Country/List"/>
+
+        </form>
+    </div>
+</div>
