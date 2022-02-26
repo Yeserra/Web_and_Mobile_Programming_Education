@@ -5,9 +5,9 @@ using System.Web;
 
 namespace Project.Models.Classes
 {
-    public class Degree
+    public class Country
     {
-        public int DegreeId { get; set; }
-        public string DegreeName { get; set; }
+        public string CountryId { get; set; }
+        public string CountryName { get; set; }
     }
 }
