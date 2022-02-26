@@ -1,0 +1,16 @@
+@model Project.Models.ViewModels.CountryModel
+
+<h2>@Model.Title</h2>
+
+<div class="row">
+    <div class="col-md-5">
+        <form method="post">
+            <input class="form-control" type="@Model.Type" name="CountryId" value="@Model.Country.CountryId"/>
+            <br/>
+            <input class="form-control" type="text" name="CountryName" value="@Model.Country.CountryName"/>
+            <br/>
+            <input type="submit" class="@Model.BtnClass" value="@Model.BtnVal"/>
+            <a class="btn btn-warning" href="/Country/List">Cancel</a>
+        </form>
+    </div>
+</div>
