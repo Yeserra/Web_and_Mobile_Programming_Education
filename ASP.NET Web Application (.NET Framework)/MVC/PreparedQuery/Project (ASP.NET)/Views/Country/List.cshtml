@@ -1,0 +1,32 @@
+@model List<Project.Models.Classes.Country>
+
+<div class="row">
+    <div class="col-md-7">
+        <h2>Countries List</h2>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Country</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CountryId</td>
+                        <td>@item.CountryName</td>
+                        <td><a class="btn btn-danger" href="/Country/Delete/@item.CountryId">Delete</a></td>
+                        <td><a class="btn btn-success" href="/Country/Update/@item.CountryId">Update</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <form action="/Country/Create" method="get">
+            <a class="btn btn-primary" href="/Country/Create" type="submit" value="Add New">Add New</a>
+        </form>
+    </div>
+</div>
