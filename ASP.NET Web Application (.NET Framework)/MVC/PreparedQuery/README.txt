@@ -19,4 +19,4 @@ ManualQuery -> SağTık -> Properties -> Settings -> Add
 Type = (ConnectionString)
 Value = Sağdaki ...'dan ServerName'e SQL'deki ServerName'i Copy-Paste, "select or enter a database name" kısmında da bağlamak istenilen database seçilir.
 Kaydedildiği zaman Web.config dosyası içerisine otomatik olarak <connectionString> tag'ı eklenir.
-<connectionString> tag'ı içindeki name, "Connection" olarak değiştirilmelidir. Çünkü DbConnect'te o isim verildi!
+<connectionString> tag'ı içindeki name, "Connection" olarak değiştirilmelidir. Çünkü BaseRepository'de o isim verildi!
