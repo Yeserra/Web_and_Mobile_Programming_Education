@@ -1,0 +1,16 @@
+@model Project.Models.ViewModels.DegreeModel
+
+<h2>@Model.Title</h2>
+
+<div class="row">
+    <div class="col-md-5">
+        <form method="post">
+            <input class="form-control" type="@Model.Type" name="DegreeId" value="@Model.Degree.DegreeId" readonly/>
+            <br/>
+            <input class="form-control" type="text" name="DegreeName" value="@Model.Degree.DegreeName"/>
+            <br/>
+            <input type="submit" class="@Model.BtnClass" value="@Model.BtnVal"/>
+            <a class="btn btn-warning" href="/Degree/List">Cancel</a>
+        </form>
+    </div>
+</div>
