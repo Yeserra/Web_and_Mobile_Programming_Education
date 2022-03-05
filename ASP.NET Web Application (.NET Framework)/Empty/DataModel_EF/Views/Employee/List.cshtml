@@ -1,0 +1,47 @@
+@model List<DataModel_EF.Models.DTOs.EmployeeDTO>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<br />
+<h2>Employees</h2>
+<br />
+<div class="alert alert-warning" role="alert">
+    @Session["Error"]
+</div>
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id (Number)</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Nationality</th>
+            <th>Degree</th>
+            <th>Manager</th>
+            <th>Delete</th>
+            <th>Update</th>
+        <tr>
+    </thead>
+    <tboody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeId</td>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.Nationality</td>
+                <td>@item.DegreeName</td>
+                <td>@item.Manager</td>
+                <td><a class="btn btn-danger" href="/Employee/Delete/@item.EmployeeId">Delete</a></td>
+                <td><a class="btn btn-success" href="/Employee/Update/@item.EmployeeId">Update</a></td>
+            </tr>
+        }
+    </tboody>
+</table>
+<br />
+<form>
+    <input class="btn btn-primary" type="submit" formaction="/Employee/Create" value="Add New" />
+</form>
+
