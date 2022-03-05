@@ -1,0 +1,97 @@
+@model DataModel_EF.Models.ViewModels.EmployeeModel
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<br />
+<h2>@Model.Title</h2>
+
+<div class="row">
+    <div class="col-md-5">
+        <form method="post">
+
+            <input type="@Model.Type" class="form-control" name="Employee.EmployeeId" value="@Model.Employee.EmployeeId" />
+
+            <br /><label>Name</label>
+            <input type="text" class="form-control" name="Employee.Name" value="@Model.Employee.Name" />
+
+            <br /><label>Surname</label>
+            <input type="text" class="form-control" name="Employee.Surname" value="@Model.Employee.Surname" />
+
+            <br /><label>Salary</label>
+            <input type="text" class="form-control" name="Employee.Salary" value="@Model.Employee.Salary" />
+
+            <br /><label>Degree</label>
+            <select class="form-control" name="Employee.DegreeId">
+                @foreach (var item in Model.DegreeList)
+                {
+
+                    if (item.DegreeId == Model.Employee.DegreeId)
+                    {
+                        <option style="color:red" selected value="@item.DegreeId">@item.DegreeName</option>
+                    }
+                    else
+                    {
+                        <option value="@item.DegreeId">@item.DegreeName</option>
+                    }
+                }
+            </select>
+
+            <br /><label>Country</label>
+            <select class="form-control" name="Employee.CountryId">
+                @foreach (var item in Model.CountryList)
+                {
+
+                    if (item.CountryId == Model.Employee.CountryId)
+                    {
+                        <option style="color:red" selected value="@item.CountryId">@item.CountryName</option>
+                    }
+                    else
+                    {
+                        <option value="@item.CountryId">@item.CountryName</option>
+                    }
+                }
+
+            </select>
+
+            <br /><label>Nationality</label>
+            <select class="form-control" name="Employee.NatId">
+                @foreach (var item in Model.CountryList)
+                {
+
+                    if (item.CountryId == Model.Employee.NatId)
+                    {
+                        <option style="color:red" selected value="@item.CountryId">@item.CountryName</option>
+
+                    }
+                    else
+                    {
+                        <option value="@item.CountryId">@item.CountryName</option>
+
+                    }
+                }
+            </select>
+
+            <br /><label>Manager</label>
+            <select class="form-control" name="Employee.ManagerId">
+                @foreach (var item in Model.ManagerList)
+                {
+                    if (item.ManagerId == Model.Employee.ManagerId)
+                    {
+                        <option style="color:red" selected value="@item.ManagerId">@item.FullName</option>
+                    }
+                    else
+                    {
+                        <option value="@item.ManagerId">@item.FullName</option>
+                    }
+                }
+            </select>
+
+            <br />
+            <input type="submit" class="@Model.BtnClass" value="@Model.BtnVal" />
+
+            <input type="submit" class="btn btn-warning" value="Cancel" formaction="/Employee/List" />
+
+        </form>
+    </div>
+</div>
