@@ -1,0 +1,45 @@
+@model List<DataModel_EF.Models.Data.Country>
+
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<br />
+<h2>Countries</h2>
+
+<div class="row">
+    <div class="col-md-7">
+        <br />
+        <div class="alert alert-warning" role="alert">
+            @Session["Error"]
+        </div>
+        <br />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Country</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                    <th>Employees</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CountryId</td>
+                        <td>@item.CountryName</td>
+                        <td><a class="btn btn-danger" href="/Country/Delete/@item.CountryId">Delete</a></td>
+                        <td><a class="btn btn-success" href="/Country/Update/@item.CountryId">Update</a></td>
+                        <td><a class="btn btn-dark" href="/Employee/ListByCountryId/@item.CountryId">Employees</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        <form>
+            <input class="btn btn-primary" type="submit" value="Add" formaction="/Country/Create" />
+        </form>
+    </div>
+</div>
