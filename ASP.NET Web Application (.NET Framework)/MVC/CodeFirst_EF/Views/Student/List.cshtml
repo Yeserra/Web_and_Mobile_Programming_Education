@@ -1,0 +1,53 @@
+@model List<CodeFirst_EF.Models.DTOs.StudentDTO>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2>Students</h2>
+<div class="row">
+    <div class="col-md-7">
+
+        <br />
+        <div class="alert alert-warning" role="alert">
+            @Session["Error"]
+        </div>
+        <br />
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Student Number (Id)</th>
+                    <th>Student Name</th>
+                    <th>Student Surname</th>
+                    <th>City</th>
+                    <th>Mother Name</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Surname</td>
+                        <td>@item.CityName</td>
+                        <td>@item.MotherName</td>
+                        <td><a class="btn btn-danger" href="/Student/Delete/@item.Id">Delete</a></td>
+                        <td><a class="btn btn-success" href="/Student/Update/@item.Id">Update</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+
+        <form>
+            <input class="btn btn-primary" type="submit" value="New" formaction="/Student/Create" />
+        </form>
+
+    </div>
+</div>
+
