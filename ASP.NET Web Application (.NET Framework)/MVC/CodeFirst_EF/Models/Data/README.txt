@@ -87,6 +87,6 @@ ________________________________________________________________________________
 
 5. Tablolar hazır olduğunda Migration yapılır.
 
-Enable-Migrations: Bir Configuraiton sınıfı oluşturarak projede geçişi etkinleştirir.
+Enable-Migrations: Bir Configuraiton sınıfı oluşturarak projede geçişi etkinleştirir. (false)
 Add-Migration: Up() ve Down() methodlarıyla belirtilen her bir isme göre yeni bir geçiş sınıfı (migration class) oluşturur.
 Update-Database: En son oluşturulan migration dosyasınıı yürütür ve değişiklikleri veritabanı şemasına uygular.
