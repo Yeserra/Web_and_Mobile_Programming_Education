@@ -1,0 +1,37 @@
+@model SimpleCore.Models.ViewModels.CityModel
+
+@{
+    ViewData["Title"] = "CrUD";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>@Model.Title</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
+
+        <form method="post">
+
+            <div class="form-group" hidden>
+                <input asp-for="City.CityId" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="City.CityName" class="control-label"></label>
+                <input asp-for="City.CityName" class="form-control" />
+                <span asp-validation-for="City.CityName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="@Model.BtnVal" class="@Model.BtnClass" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
