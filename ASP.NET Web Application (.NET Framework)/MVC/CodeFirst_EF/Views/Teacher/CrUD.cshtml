@@ -1,0 +1,48 @@
+@model CodeFirst_EF.Models.ViewModels.TeacherModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2>@Model.Title</h2>
+
+<div class="row">
+    <div class="col-md-5">
+        <form method="post">
+
+            <input class="form-control" type="@Model.Type" name="Teacher.Id" value="@Model.Teacher.Id"/>
+
+            <br /><label>Name</label>
+            <input class="form-control" type="text" name="Teacher.Name" value="@Model.Teacher.Name"/>
+
+            <br /><label>Surname</label>
+            <input class="form-control" type="text" name="Teacher.Surname" value="@Model.Teacher.Surname"/>
+
+            <br /><label>City</label>
+            <select class="form-control" name="Teacher.CityId">
+                @foreach (var item in Model.CityList)
+                {
+                    if (item.CityId == Model.Teacher.CityId)
+                    {
+                        <option style="color:red" value="@item.CityId" selected>@item.CityName</option>
+                    }
+                    else
+                    {
+                        <option value="@item.CityId">@item.CityName</option>
+                    }
+                }
+            </select>
+
+            <br /><label>Mother Name</label>
+            <input class="form-control" type="text" name="Teacher.MotherName" value="@Model.Teacher.MotherName"/>
+            <br />
+
+            <input class="@Model.BtnClass" type="submit" value="@Model.BtnVal"/>
+
+            <input class="btn btn-warning" type="submit" value="Cancel" formaction="/Teacher/List"/>
+
+        </form>
+    </div>
+</div>
+
