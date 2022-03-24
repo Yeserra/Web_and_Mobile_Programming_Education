@@ -1,0 +1,64 @@
+@model BasicRepositorySoftDelete.Models.ViewModel.EmployeeModel
+
+@{
+    ViewData["Title"] = "Crud";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Crud</h1>
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group" hidden>
+                <input asp-for="Employee.Id" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Employee.EmpName" class="control-label"></label>
+                <input asp-for="Employee.EmpName" class="form-control" />
+                <span asp-validation-for="Employee.EmpName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Employee.EmpSurname" class="control-label"></label>
+                <input asp-for="Employee.EmpSurname" class="form-control" />
+                <span asp-validation-for="Employee.EmpSurname" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <select name="Employee.CityId" class="form-control">
+                    @foreach (var item in Model.CityList)
+                    {
+                        if (item.Id == Model.Employee.CityId)
+                        {
+                            <option selected style="color:red" name="Employee.CityId" value="@item.Id">@item.CityName</option>
+                        }
+                        else
+                        {
+                            <option name="Employee.CityId" value="@item.Id">@item.CityName</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="@Model.BtnVal" class="@Model.BtnClass" />
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-warning" href="/Employee/List">İptal</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
